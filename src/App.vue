@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+      <header-app></header-app>
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Poke-Vue</h1>
+          <p class="lead text-muted">Basic information about the Pokémons you love.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Loading...</a>
+          </p>
+        </div>
+      </section>
+
+      <router-view></router-view>
+
+      <footer-app></footer-app>
+
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderApp from "./components/HeaderApp.vue"
+import PokemonGridApp from "./components/PokemonGridApp.vue"
+import FooterApp from "./components/FooterApp.vue"
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    HeaderApp,
+    PokemonGridApp,
+    FooterApp
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #e9ecef;
 }
 </style>
